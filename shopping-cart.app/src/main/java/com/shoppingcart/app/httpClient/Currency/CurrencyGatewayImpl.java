@@ -1,37 +1,38 @@
 package com.shoppingcart.app.httpClient.Currency;
 
-import com.shoppingcart.app.model.CurrencyResponseModel;
+import com.shoppingcart.app.model.CurrencyInfo;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.util.HashMap;
 import java.util.Map;
 
 @Service
 public class CurrencyGatewayImpl implements CurrencyGateway {
-    private CurrencyResponseModel currencyResponse;
+    private CurrencyInfo currencyInfo;
     private final RestTemplate restTemplate;
+    private final ObjectMapper objectMapper;
     private final String urlApi = "https://economia.awesomeapi.com.br/last/USD-";
 
     @Autowired
-    public CurrencyGatewayImpl(CurrencyResponseModel currencyResponse, RestTemplate restTemplate) {
-        this.currencyResponse = currencyResponse;
+    public CurrencyGatewayImpl(CurrencyInfo currencyInfo, RestTemplate restTemplate, ObjectMapper objectMapper) {
+        this.currencyInfo = currencyInfo;
         this.restTemplate = restTemplate;
+        this.objectMapper = objectMapper;
     }
 
     @Override
-    public Map<String, BigDecimal> getCurrency(String currency) throws Exception {
-        currency = currency.toUpperCase();
-        this.currencyResponse = this.restTemplate.getForObject(this.urlApi + currency, CurrencyResponseModel.class);
+    public Map<String, CurrencyInfo> getCurrencyData(String currency){
+        String url = this.urlApi + currency;
+        String response = this.restTemplate.getForObject(url, String.class);
 
-        if (this.currencyResponse == null) throw new Exception("Erro ao realizar a requisição");
-
-        Map<String, BigDecimal> actualCurrency = new HashMap<>();
-        actualCurrency.put(this.currencyResponse.getObject(), new BigDecimal (this.currencyResponse.getObject()));
-
-        return actualCurrency;
+        try {
+            return this.objectMapper.readValue(response, CurrencyInfoMap.class).getCurrencyMap();
+        } catch (Exception exception) {
+            exception.printStackTrace();
+            return null;
+        }
     }
+
 }
