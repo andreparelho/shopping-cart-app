@@ -1,8 +1,9 @@
 package com.shoppingcart.app.httpClient.Currency;
 
-import java.math.BigDecimal;
+import com.shoppingcart.app.model.CurrencyInfo;
+
 import java.util.Map;
 
 public interface CurrencyGateway {
-    Map<String, BigDecimal> getCurrency(String currency) throws Exception;
+    Map<String, CurrencyInfo> getCurrencyData(String currency) throws Exception;
 }
