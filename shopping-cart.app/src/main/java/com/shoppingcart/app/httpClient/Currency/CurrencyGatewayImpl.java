@@ -1,6 +1,6 @@
 package com.shoppingcart.app.httpClient.Currency;
 
-import com.shoppingcart.app.model.CurrencyInfo;
+import com.shoppingcart.app.model.CurrencyInfoModel;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,20 +10,20 @@ import java.util.Map;
 
 @Service
 public class CurrencyGatewayImpl implements CurrencyGateway {
-    private CurrencyInfo currencyInfo;
+    private CurrencyInfoModel currencyInfoModel;
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
     private final String urlApi = "https://economia.awesomeapi.com.br/last/USD-";
 
     @Autowired
-    public CurrencyGatewayImpl(CurrencyInfo currencyInfo, RestTemplate restTemplate, ObjectMapper objectMapper) {
-        this.currencyInfo = currencyInfo;
+    public CurrencyGatewayImpl(CurrencyInfoModel currencyInfoModel, RestTemplate restTemplate, ObjectMapper objectMapper) {
+        this.currencyInfoModel = currencyInfoModel;
         this.restTemplate = restTemplate;
         this.objectMapper = objectMapper;
     }
 
     @Override
-    public Map<String, CurrencyInfo> getCurrencyData(String currency){
+    public Map<String, CurrencyInfoModel> getCurrencyData(String currency){
         String url = this.urlApi + currency;
         String response = this.restTemplate.getForObject(url, String.class);
 

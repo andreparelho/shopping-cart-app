@@ -2,11 +2,11 @@ package com.shoppingcart.app.model;
 
 import com.fasterxml.jackson.annotation.*;
 
-public class CurrencyData {
+public class CurrencyDataModel {
     @JsonRawValue
-    private CurrencyInfo currencyInfo;
+    private CurrencyInfoModel currencyInfoModel;
 
-    public CurrencyInfo getCurrencyInfo() {
-        return currencyInfo;
+    public CurrencyInfoModel getCurrencyInfo() {
+        return currencyInfoModel;
     }
 }

@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f610778-41ad-46bf-8f3f-93463b772449" name="Changes" comment="update and test on api currencies">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart.app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart.app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart.app/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart.app/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping-cart.app/src/main/java/com/shoppingcart/app/controller/CurrencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart.app/src/main/java/com/shoppingcart/app/controller/CurrencyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping-cart.app/src/main/java/com/shoppingcart/app/httpClient/Currency/CurrencyGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart.app/src/main/java/com/shoppingcart/app/httpClient/Currency/CurrencyGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping-cart.app/src/main/java/com/shoppingcart/app/httpClient/Currency/CurrencyGatewayImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart.app/src/main/java/com/shoppingcart/app/httpClient/Currency/CurrencyGatewayImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping-cart.app/src/main/java/com/shoppingcart/app/httpClient/Currency/CurrencyInfoMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart.app/src/main/java/com/shoppingcart/app/httpClient/Currency/CurrencyInfoMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping-cart.app/src/main/java/com/shoppingcart/app/model/CurrencyData.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart.app/src/main/java/com/shoppingcart/app/model/CurrencyDataModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping-cart.app/src/main/java/com/shoppingcart/app/model/CurrencyInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart.app/src/main/java/com/shoppingcart/app/model/CurrencyInfoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping-cart.app/src/main/java/com/shoppingcart/app/service/CurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-cart.app/src/main/java/com/shoppingcart/app/service/CurrencyService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

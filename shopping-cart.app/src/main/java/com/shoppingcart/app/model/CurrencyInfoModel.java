@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CurrencyInfo {
+public class CurrencyInfoModel {
     private String code;
     private String codin;
     private String name;

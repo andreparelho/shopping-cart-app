@@ -1,6 +1,6 @@
 package com.shoppingcart.app.controller;
 
-import com.shoppingcart.app.model.CurrencyData;
+import com.shoppingcart.app.model.CurrencyDataModel;
 import com.shoppingcart.app.service.CurrencyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,9 +19,9 @@ public class CurrencyController {
     }
 
     @GetMapping("/{currency}")
-    public ResponseEntity<Map<String, CurrencyData>> getCurrency(@PathVariable String currency) throws Exception {
-        ResponseEntity<Map<String, CurrencyData>> response;
-        response = (ResponseEntity<Map<String, CurrencyData>>) this.currencyService.getCurrency(currency);
+    public ResponseEntity<Map<String, CurrencyDataModel>> getCurrency(@PathVariable String currency) throws Exception {
+        ResponseEntity<Map<String, CurrencyDataModel>> response;
+        response = (ResponseEntity<Map<String, CurrencyDataModel>>) this.currencyService.getCurrency(currency);
         return response;
     }
 }
